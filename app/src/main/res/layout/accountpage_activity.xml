@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+<!--Header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_info_header_half_round"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/avatarButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/user_info_avatar_round"
+            android:src="@drawable/user_avatar"
+            android:scaleType="centerCrop"
+            android:contentDescription="User Avatar"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donal Trump"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="donaltrump@gmail.com"
+            android:textSize="16sp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <!-- Body -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!--Edit Profile-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:layout_margin="16dp"
+            android:background="@drawable/user_info_border_radius">
+
+            <ImageView
+                android:id="@+id/iconProfile"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/user_detail_profile_avatar"
+                android:background="@drawable/user_info_avatar_round"
+                android:scaleType="centerCrop"
+                android:contentDescription="User Profile Icon" />
+
+            <TextView
+                android:id="@+id/textProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Edit Profile"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@android:color/black"
+                android:gravity="left"/>
+
+        </LinearLayout>
+
+        <!--Cart-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:layout_margin="16dp"
+            android:background="@drawable/user_info_border_radius"
+            tools:ignore="ExtraText">
+
+            <ImageView
+                android:id="@+id/iconCart"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/cart_avatar"
+                android:scaleType="centerCrop"
+                android:contentDescription="Cart Icon"/>
+
+            <TextView
+                android:id="@+id/textCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="View Cart"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@android:color/black"
+                android:gravity="left"/>
+        </LinearLayout>
+
+        <!--Order History-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:layout_margin="16dp"
+            android:background="@drawable/user_info_border_radius">
+
+            <ImageView
+                android:id="@+id/iconOrderHistory"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/order_history"
+                android:scaleType="centerCrop"
+                android:contentDescription="User Profile Icon" />
+
+            <TextView
+                android:id="@+id/textOrderHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Order History"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@android:color/black"
+                android:gravity="left"/>
+        </LinearLayout>
+
+        <!--Logout-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical"
+            android:layout_margin="16dp"
+            android:background="@drawable/user_info_border_radius">
+
+            <!-- Left side: Icon with round border -->
+            <ImageView
+                android:id="@+id/iconLogout"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/log_out"
+                android:scaleType="centerCrop"
+                android:contentDescription="User Profile Icon" />
+
+            <!-- Right side: Text label -->
+            <TextView
+                android:id="@+id/textLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="Logout"
+                android:textSize="24sp"
+                android:textStyle="normal"
+                android:textColor="@android:color/black"
+                android:gravity="left"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
