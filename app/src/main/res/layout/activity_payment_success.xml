@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <!-- Success Icon -->
+        <ImageView
+            android:id="@+id/successIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Success Icon"
+            android:src="@drawable/success_payment" />
+
+        <!-- Success Message -->
+        <TextView
+            android:id="@+id/successMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Your purchase is complete!"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Thank You Note -->
+        <TextView
+            android:id="@+id/thankYouNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Thank you for shopping"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
+        <!-- Payment Details Card -->
+
+        <!-- Next Actions Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/payment_details_card_background"
+            android:elevation="2dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Total Purchase Amount -->
+            <TextView
+                android:id="@+id/transactionAmountLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Purchase Amount"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/transactionAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="$150.00"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Order Number -->
+            <TextView
+                android:id="@+id/transactionIdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Number"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/transactionId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="ACC123456789"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Payment Date -->
+            <TextView
+                android:id="@+id/paymentDateLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Purchase Date"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/paymentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Nov 8, 2024"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <!-- Payment Method -->
+            <TextView
+                android:id="@+id/paymentMethodLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Method"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/paymentMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit Card (**** **** **** 1234)"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nextActionsLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="What would you like to do next?"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <!-- Buttons for Additional Actions -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Back to Home Button -->
+            <Button
+                android:id="@+id/btnBackToHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@android:color/system_secondary_container_dark"
+                android:text="Back to Home"
+                android:textColor="@android:color/white" />
+
+            <!-- Continue Shopping Button -->
+            <Button
+                android:id="@+id/btnContinueShopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@android:color/system_primary_container_dark"
+                android:text="Continue Shopping"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Additional Info Note -->
+        <TextView
+            android:id="@+id/noteText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Need help? Contact our support team for any inquiries regarding your order."
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>
