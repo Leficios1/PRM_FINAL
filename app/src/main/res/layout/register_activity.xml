@@ -3,70 +3,131 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- ImageView for background image -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
         android:src="@drawable/image2" />
 
-    <!-- Overlay for Login Form -->
-    <LinearLayout
-        android:layout_width="264dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="@drawable/login_form_background"
-        android:orientation="vertical"
-        android:padding="24dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="264dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingBottom="16dp"
-            android:text="Register"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/login_form_background"
+            android:orientation="vertical"
+            android:padding="24dp">
 
-        <!-- Username Field -->
-        <EditText
-            android:id="@+id/registerusername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/edit_text"
-            android:hint="Username"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="16dp"
+                android:text="Register"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
-            android:inputType="textPersonName" />
+            <!-- Name Field -->
+            <EditText
+                android:id="@+id/registerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/edit_text"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:padding="8dp" />
 
-        <!-- Password Field -->
-        <EditText
-            android:id="@+id/registerpassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@android:drawable/edit_text"
-            android:hint="Password"
-            android:inputType="textPassword" />
+            <!-- Email Field -->
+            <EditText
+                android:id="@+id/registerEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="8dp" />
 
-        <EditText
-            android:id="@+id/confirmregisterpassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:background="@android:drawable/edit_text"
-            android:hint="Confirm Password"
-            android:inputType="textPassword" />
+            <!-- Password Field -->
+            <EditText
+                android:id="@+id/registerPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="8dp" />
 
-        <!-- Login Button -->
-        <Button
-            android:id="@+id/RegisterButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textSize="20dp"
-            android:background="@drawable/login_button_background"
-            android:text="Register" />
+            <!-- Confirm Password Field -->
+            <EditText
+                android:id="@+id/confirmRegisterPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:padding="8dp" />
 
+            <!-- Phone Field -->
+            <EditText
+                android:id="@+id/registerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:padding="8dp" />
 
-    </LinearLayout>
+            <!-- Address Field -->
+            <EditText
+                android:id="@+id/registerAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Address"
+                android:inputType="textPostalAddress"
+                android:padding="8dp" />
+
+            <!-- Date of Birth Field -->
+            <EditText
+                android:id="@+id/registerDateOfBirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Date of Birth"
+                android:inputType="date"
+                android:padding="8dp"
+                android:focusable="false" />
+
+            <!-- Gender Selection -->
+            <Spinner
+                android:id="@+id/registerGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/edit_text"
+                android:padding="8dp" />
+
+            <!-- Register Button -->
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/login_button_background"
+                android:text="Register"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

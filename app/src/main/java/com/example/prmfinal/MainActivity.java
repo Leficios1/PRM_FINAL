@@ -1,42 +1,31 @@
 package com.example.prmfinal;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.VideoView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private VideoView videoView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.landing_page);
 
-        videoView = findViewById(R.id.videoView);
+        // Kiểm tra trạng thái đăng nhập
+        SharedPreferences prefs = getSharedPreferences("user_prefs", MODE_PRIVATE);
+        boolean isLoggedIn = prefs.getBoolean("is_logged_in", false);
 
-        Uri videoUri = Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video1);
-        videoView.setVideoURI(videoUri);
-
-        videoView.setOnPreparedListener(mp -> {
-            mp.setLooping(true);
-            videoView.start();
-        });
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        // Resume video if needed
-        if (!videoView.isPlaying()) {
-            videoView.start();
+        Intent intent;
+        if (isLoggedIn) {
+            // Nếu đã đăng nhập, chuyển thẳng sang ProductActivity
+            intent = new Intent(this, ProductActivity.class);
+        } else {
+            // Nếu chưa đăng nhập, chuyển sang LoginActivity
+            intent = new Intent(this, LoginActivity.class);
         }
-    }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        // Pause video to save resources
-        videoView.pause();
+        startActivity(intent);
+        finish();
     }
 }
