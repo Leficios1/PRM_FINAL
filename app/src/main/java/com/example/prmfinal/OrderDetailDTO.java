@@ -3,42 +3,43 @@ package com.example.prmfinal;
 import java.util.Date;
 
 public class OrderDetailDTO {
-    private int productId;
-    private int quantity;
-    private double price;
-    private Date expiredWarranty;
+    private int ProductId;
+    private int Quantity;
+    private double Price;
+    public Date ExpiredWarranty;
+
 
     // Getters and Setters
     public int getProductId() {
-        return productId;
+        return ProductId;
     }
 
     public void setProductId(int productId) {
-        this.productId = productId;
+        this.ProductId = productId;
     }
 
     public int getQuantity() {
-        return quantity;
+        return Quantity;
     }
 
     public void setQuantity(int quantity) {
-        this.quantity = quantity;
+        this.Quantity = quantity;
     }
 
     public double getPrice() {
-        return price;
+        return Price;
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        this.Price = price;
     }
 
     public Date getExpiredWarranty() {
-        return expiredWarranty;
+        return ExpiredWarranty;
     }
 
     public void setExpiredWarranty(Date expiredWarranty) {
-        this.expiredWarranty = expiredWarranty;
+        ExpiredWarranty = expiredWarranty;
     }
 }
 

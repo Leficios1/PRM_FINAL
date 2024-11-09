@@ -1,6 +1,8 @@
 package com.example.prmfinal;
 
-public class CartItem {
+import java.io.Serializable;
+
+public class CartItem implements Serializable {
     private int productId;
     private String productName;
     private String imageUrl;

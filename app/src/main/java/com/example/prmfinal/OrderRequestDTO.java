@@ -4,31 +4,31 @@ import java.util.Date;
 import java.util.List;
 
 public class OrderRequestDTO {
-    private List<OrderDetailDTO> orderDetails;
-    private Date orderDate;
+    private List<OrderDetailDTO> OrderDetails;
+    private String OrderDate; // Changed from Date to String
     private int status;
     private String statusMessage;
-    private String paymentName;
-    private String nameCustomer;
-    private String addressCustomer;
-    private String phoneCustomer;
-    private int userId;
+    private String PaymentName;
+    private String NameCustomer;
+    private String AddressCustomer;
+    private String PhoneCustomer;
+    private int UserId;
 
     // Getters and Setters
     public List<OrderDetailDTO> getOrderDetails() {
-        return orderDetails;
+        return OrderDetails;
     }
 
     public void setOrderDetails(List<OrderDetailDTO> orderDetails) {
-        this.orderDetails = orderDetails;
+        this.OrderDetails = orderDetails;
     }
 
-    public Date getOrderDate() {
-        return orderDate;
+    public String getOrderDate() {
+        return OrderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
-        this.orderDate = orderDate;
+    public void setOrderDate(String orderDate) {
+        OrderDate = orderDate;
     }
 
     public int getStatus() {
@@ -48,43 +48,43 @@ public class OrderRequestDTO {
     }
 
     public String getPaymentName() {
-        return paymentName;
+        return PaymentName;
     }
 
     public void setPaymentName(String paymentName) {
-        this.paymentName = paymentName;
+        this.PaymentName = paymentName;
     }
 
     public String getNameCustomer() {
-        return nameCustomer;
+        return NameCustomer;
     }
 
     public void setNameCustomer(String nameCustomer) {
-        this.nameCustomer = nameCustomer;
+        this.NameCustomer = nameCustomer;
     }
 
     public String getAddressCustomer() {
-        return addressCustomer;
+        return AddressCustomer;
     }
 
     public void setAddressCustomer(String addressCustomer) {
-        this.addressCustomer = addressCustomer;
+        this.AddressCustomer = addressCustomer;
     }
 
     public String getPhoneCustomer() {
-        return phoneCustomer;
+        return PhoneCustomer;
     }
 
     public void setPhoneCustomer(String phoneCustomer) {
-        this.phoneCustomer = phoneCustomer;
+        this.PhoneCustomer = phoneCustomer;
     }
 
     public int getUserId() {
-        return userId;
+        return UserId;
     }
 
     public void setUserId(int userId) {
-        this.userId = userId;
+        this.UserId = userId;
     }
 }
 

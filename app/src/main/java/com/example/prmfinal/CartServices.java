@@ -2,6 +2,7 @@ package com.example.prmfinal;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
@@ -13,4 +14,7 @@ public interface CartServices {
 
     @GET("api/Cart/get-by-user-id/{userId}")
     Call<CartResponse> getCartByUserId(@Header("Authorization") String token, @Path("userId") int userId);
+
+    @DELETE("api/Cart/delete-all-carts-by-user-id/{userId}")
+    Call<Boolean> DeleteAllCartsByUserId(@Header("Authorization") String token, @Path("userId") int userId);
 }

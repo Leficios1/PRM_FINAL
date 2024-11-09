@@ -1,8 +1,10 @@
 package com.example.prmfinal;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +28,8 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnCar
     private List<CartItem> cartItems = new ArrayList<>();
     private TextView totalPriceText;
     private ProgressBar progressBar;
+    private Button checkOutBtn;
+    private double totalPrice = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +44,21 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnCar
         recyclerView = findViewById(R.id.cartRecyclerView);
         totalPriceText = findViewById(R.id.totalPriceText);
         progressBar = findViewById(R.id.progressBar);
+        checkOutBtn = findViewById(R.id.checkoutButton);
 
         adapter = new CartAdapter(this, cartItems, this);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+        checkOutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CartActivity.this, CheckOutActivity.class);
+                intent.putExtra("cartItems", new ArrayList<>(cartItems));
+                intent.putExtra("totalPrice", totalPrice);
+                startActivity(intent);
+            }
+        });
     }
 
     private void loadCartItems() {
@@ -62,6 +77,7 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnCar
                         progressBar.setVisibility(View.GONE);
                         if (response.isSuccessful() && response.body() != null) {
                             adapter.updateItems(response.body().getData());
+                            cartItems = response.body().getData();
                             updateTotalPrice();
                         } else {
                             Toast.makeText(CartActivity.this,
@@ -85,6 +101,7 @@ public class CartActivity extends AppCompatActivity implements CartAdapter.OnCar
         }
         NumberFormat formatter = NumberFormat.getInstance(new Locale("vi", "VN"));
         totalPriceText.setText("Tổng tiền: " + formatter.format(total) + " ₫");
+        totalPrice = total;
     }
 
     @Override

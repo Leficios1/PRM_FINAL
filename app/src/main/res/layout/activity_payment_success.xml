@@ -121,48 +121,23 @@
                 android:id="@+id/paymentMethod"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Credit Card (**** **** **** 1234)"
+                android:text="ZaloPay"
                 android:textColor="@color/black"
                 android:textSize="16sp" />
 
         </LinearLayout>
-
-        <TextView
-            android:id="@+id/nextActionsLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="What would you like to do next?"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <!-- Buttons for Additional Actions -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
             <!-- Back to Home Button -->
-            <Button
-                android:id="@+id/btnBackToHome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:backgroundTint="@android:color/system_secondary_container_dark"
-                android:text="Back to Home"
-                android:textColor="@android:color/white" />
-
-            <!-- Continue Shopping Button -->
-            <Button
-                android:id="@+id/btnContinueShopping"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@android:color/system_primary_container_dark"
-                android:text="Continue Shopping"
-                android:textColor="@android:color/white" />
-        </LinearLayout>
 
         <!-- Additional Info Note -->
+        <Button
+            android:id="@+id/btnBackToHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@android:color/system_secondary_container_dark"
+            android:text="Back to Home"
+            android:textColor="@android:color/white" />
+
         <TextView
             android:id="@+id/noteText"
             android:layout_width="wrap_content"
