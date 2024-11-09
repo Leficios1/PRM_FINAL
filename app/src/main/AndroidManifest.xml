@@ -53,6 +53,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".OrderHistoryActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".PaymentNoti"
             android:exported="true" />
 

@@ -97,6 +97,11 @@ public class ProductActivity extends AppCompatActivity {
         sideMenu.findViewById(R.id.menu_logout).setOnClickListener(v -> {
             logout();
         });
+
+        sideMenu.findViewById(R.id.menu_history).setOnClickListener(v ->{
+            Intent intent = new Intent(ProductActivity.this, OrderHistoryActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void setupCartIcon() {
